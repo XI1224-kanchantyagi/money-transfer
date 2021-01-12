@@ -1,0 +1,38 @@
+@import '../../../global-style/palette.scss';
+
+.sorting-container {
+    display: flex;
+    margin-top: 0;
+    label {
+        margin: 7px 10px 0 0;
+        font-weight: 400;
+        font-size: 12px;
+    }
+    ul {
+        li {
+            display: inline-block;
+            padding: 5px 20px;
+            text-transform: uppercase;
+            border: 1px solid $color-border-input;
+            border-right: none;
+            cursor: pointer;
+        }
+        li:last-child {
+            border-right: 1px solid $color-border-input;
+        }
+        li:hover {
+            background-color: $color-border-input;
+        }
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 667px) {
+    .sorting-container {
+        margin-top: 22px !important;
+        ul {
+            li {
+                padding: 5px 9px !important;
+            }
+        }
+    }
+}

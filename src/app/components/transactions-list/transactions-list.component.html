@@ -1,0 +1,22 @@
+<div class="transactions-container">
+    <div class="container-header">Recent Transactions</div>
+    <div class="transactions-container-body">
+        <div class="filter-container">
+            <app-search (searchingElement)="searchAccount($event)" (restoreList)="resetTransactionList()"></app-search>
+            <app-sort (sortedElement)="sortingList($event)"></app-sort>
+        </div>
+        <ul>
+            <li *ngFor="let transation of transactionsList" [ngStyle]="{'border-left-color': transation.categoryCode}">
+                <div class="date-container">{{transation.date | date:'MMM d'}}</div>
+                <div class="img-container">
+                    <img src='../../../assets/images/icons/{{transation.imgPath}}.png' alt='{{transation.imgPath}}' />
+                </div>
+                <div class="detail-container">
+                    <p class="heading">{{transation.merchantName}}</p>
+                    <span>{{transation.merchantType}}</span>
+                </div>
+                <div class="currency-container">{{transation.amount | currency}}</div>
+            </li>
+        </ul>
+    </div>
+</div>

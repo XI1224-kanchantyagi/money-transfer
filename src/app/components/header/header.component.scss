@@ -1,0 +1,26 @@
+@import '../../../global-style/palette.scss';
+
+.header-nav {
+    background-color: $color-white;
+    border-bottom: 3px solid $color-button;
+    border-top: 1px solid $color-button;
+
+    .container {
+        margin: 1% auto;
+    }
+
+    .logo {
+        background-image: url('../../../assets/images/logo.jpg');
+        width: 270px;
+        height: 30px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin: 10px 0;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 667px) {
+    .logo {
+        margin: 10px auto !important;
+    }
+}

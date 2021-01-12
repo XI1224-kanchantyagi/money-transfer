@@ -1,0 +1,8 @@
+<div class="sorting-container">
+    <label>Sort by</label>
+    <ul>
+        <li *ngFor="let data of sortingTable" (click)="sortData(data)">
+            {{data}}
+        </li>
+    </ul>
+</div>

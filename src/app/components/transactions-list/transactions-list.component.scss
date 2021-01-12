@@ -1,0 +1,76 @@
+@import '../../../global-style/palette.scss';
+
+.container-header {
+    background: url('../../../assets/images/icons/briefcase.png') no-repeat 10px 5px;
+}
+.filter-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 23px;
+    app-search {
+        width: 44%;
+    }
+}
+.transactions-container-body {
+    padding: 20px;
+    box-sizing: border-box;
+    ul {
+        margin: 0;
+        padding: 0;
+        li {
+            list-style: none;
+            padding: 10px 10px 5px;
+            box-sizing: border-box;
+            border: 1px solid $color-border-input;
+            border-left-width: 8px;
+            border-bottom: none;
+            display: flex;
+            justify-content: space-between;
+            .date-container {
+                width: 20%;
+            }
+            .detail-container {
+                width: 48%;
+                padding-left: 33px;
+                box-sizing: border-box;
+                p {
+                    margin: 0;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 18px;
+                }
+                span {
+                    font-weight: 300;
+                }
+            }
+            .img-container {
+                width: 13%;
+                height: auto;
+                img {
+                    width: 35px;
+                    filter: grayscale(100%);
+                }
+            }
+            .currency-container {
+                width: 17%;
+                text-align: right;
+            }
+        }
+        li:last-child {
+            border-bottom: 1px solid $color-border-input !important;
+        }
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 667px) {
+    .filter-container {
+        display: flex;
+        flex-direction: column;
+        app-search {
+            width: 100% !important;
+        }
+    }
+    .currency-container {
+        width: auto !important;
+    }
+}

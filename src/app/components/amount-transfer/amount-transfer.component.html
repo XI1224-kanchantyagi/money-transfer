@@ -1,0 +1,29 @@
+<div class="transfer-container">
+    <div class="container-header">Make a Transfer</div>
+    <div class="transfer-container-body">
+        <div class="form-container">
+            <label>From Account</label>
+            <span class="amount-sign">Free Checking(4692) - $</span>
+            <input type="text" class="form-control from-account" [(ngModel)]="totalAmount" [readonly]="true"/>
+        </div>
+        <form [formGroup]="transactionForm" class="transactionForm" (ngSubmit)="moneyTransfer()">
+            <div class="form-container">
+                <label>To Account</label>
+                <select formControlName="toAccount" name="toAccount" id="toAccount" class="form-control">
+                    <option value="" disabled selected>Select Account</option>
+                    <option *ngFor="let account of accountsList">{{account}}</option>
+                </select>
+            </div>
+            <div class="form-container">
+                <label>Amount</label>
+                <span class="amount-sign">$</span>
+                <input type="text" class="form-control" formControlName="transferAmount" pInputText name="transferAmount" id="transferAmount" />
+            </div>
+            <div class="button-container">
+                <button type="submit" [disabled]="!transactionForm.valid">
+                    Submit
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

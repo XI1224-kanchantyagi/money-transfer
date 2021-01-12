@@ -1,1 +1,46 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import './global-style/palette.scss';
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    font-family: 'Kanit', sans-serif;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: url('./assets/images/background.jpg');
+
+    p, label, input, select, h1, h2, h3, span {
+        font-family: 'Kanit', sans-serif;
+    }
+
+    .main-container {
+        display: flex;
+        flex-direction: column;
+    
+        .container {
+            display: flex;
+            flex-direction: row;
+            margin: 3% auto;
+            width: 85%;
+            justify-content: space-between;
+
+            ul {
+                margin: 0;
+                padding: 0;
+            }
+        }
+
+        .container-header {
+            background-color: $color-header;
+            color: $color-white;
+            padding: 5px;
+            text-align: center;
+            font-size: 16px;
+            font-weight: 300;
+        }
+    }
+}

@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/money-transfer",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
